@@ -31,7 +31,7 @@
         android:layout_marginEnd="66dp"
         android:layout_marginBottom="432dp"
         android:text="@string/wsk_police"
-        android:textColor="@color/aqua"
+        style="@style/TextViewStyle"
         android:textSize="43sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,8 +42,7 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="250dp"
-        android:layout_height="48dp"
+        style="@style/EditTextStyle"
         android:layout_marginStart="86dp"
         android:layout_marginTop="218dp"
         android:layout_marginEnd="24dp"
@@ -73,8 +72,7 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="250dp"
-        android:layout_height="48dp"
+        style="@style/EditTextStyle"
         android:layout_marginStart="85dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="25dp"
