@@ -22,8 +22,4 @@ class LaunchScreen : AppCompatActivity() {
 
         }.start()
     }
-
-    private fun Intent(launchScreen: LaunchScreen, java: Class<SingIn>): Any {
-
-    }
 }
