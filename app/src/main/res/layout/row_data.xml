@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="200dp">
+    <ImageView
+        android:id="@+id/fImage"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/dep"/>
+    <TextView
+        android:id="@+id/fName"
+        android:layout_width="93dp"
+        android:layout_height="19dp"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@id/fImage"
+        android:text="Departments"
+        android:textSize="16sp"/>
+</RelativeLayout>
