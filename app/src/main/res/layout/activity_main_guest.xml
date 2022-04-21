@@ -49,14 +49,52 @@
 
     <ListView
         android:id="@+id/menu2"
-        android:dividerHeight="50dp"
-        android:headerDividersEnabled="true"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="31dp"
+        android:dividerHeight="50dp"
+        android:headerDividersEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" >
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
 
     </ListView>
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="50dp"
+        android:onClick="about_us"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/protect"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="262dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="photo_robot"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu2"
+        app:srcCompat="@drawable/face"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:onClick="paint"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/create"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
