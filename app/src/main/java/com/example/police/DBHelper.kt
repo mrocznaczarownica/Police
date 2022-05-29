@@ -1,5 +1,6 @@
 package com.example.police
 
+import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
@@ -22,15 +23,26 @@ class DBHelper(context: Context):SQLiteOpenHelper(context, DATABASE_NAME, null, 
         db?.execSQL(users)
     }
 
+    fun setPassword(log:String, password:String): Long {
+        val db = this.writableDatabase
+        val values = ContentValues()
+        values.put("login", log)
+        values.put("pass", password)
+
+        val success = db.insert("$users", null, values)
+        db.close()
+        return success
+    }
+
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db!!.execSQL("DROP TABLE IF EXISTS $users")
         onCreate(db)
     }
 
-    fun getPasswords():ArrayList<users>{
+    fun getPasswords(log:String, password:String):ArrayList<users>{
         val usList:ArrayList<users> = ArrayList()
 
-        val query = "SELECT $login, $pass FROM $users"
+        val query = "SELECT * FROM $users WHERE login = '${log}' AND pass = '${password}'"
         val db = this.readableDatabase
 
         val cursor:Cursor?
@@ -47,5 +59,16 @@ class DBHelper(context: Context):SQLiteOpenHelper(context, DATABASE_NAME, null, 
             }while (cursor.moveToNext())
         }
         return usList
+    }
+
+    fun setPassword(std:users): Long {
+        val db = this.writableDatabase
+        val values = ContentValues()
+        values.put("$login", std.login)
+        values.put("$pass", std.pass)
+
+        val success = db.insert("$users", null, values)
+        db.close()
+        return success
     }
 }

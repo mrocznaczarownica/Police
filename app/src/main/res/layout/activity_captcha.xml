@@ -138,7 +138,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
 
-    <ImageView
+    <TextView
         android:id="@+id/imageView6"
         android:layout_width="89.33dp"
         android:layout_height="89.33dp"
@@ -146,11 +146,11 @@
         android:layout_marginTop="2dp"
         android:layout_marginEnd="135dp"
         android:layout_marginBottom="170dp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/cap" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"/>
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
@@ -161,7 +161,7 @@
         android:layout_marginBottom="116dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="ic8"
+        android:hint="Введите капчу"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -170,14 +170,14 @@
     <Button
         android:id="@+id/button6"
         android:layout_width="102dp"
-        android:layout_height="36dp"
+        android:layout_height="48dp"
         android:layout_marginStart="129dp"
         android:layout_marginEnd="129dp"
         android:layout_marginBottom="80dp"
-        android:text="ok"
-        android:onClick="capthaB"
-        android:textSize="14sp"
         android:backgroundTint="@color/butColor"
+        android:onClick="capthaB"
+        android:text="ok"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
